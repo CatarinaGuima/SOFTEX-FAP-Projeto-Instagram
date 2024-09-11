@@ -1,4 +1,4 @@
- // Importações necessárias
+// Importações necessárias
 import { v4 as randomUUID } from "uuid";
 import { faker } from "@faker-js/faker";
 
@@ -56,20 +56,20 @@ class Post {
 
   follow() {
     // Implementar o botão de FOLLOW/UNFOLLOW
-      const followButton = document.getElementById("menu-more-button");
-      let isFollowing = false;
-      if (!followButton) return;
-      followButton.id = this._id;
+    const followButton = document.getElementById("menu-more-button");
+    let isFollowing = false;
+    if (!followButton) return;
+    followButton.id = this._id;
 
-      followButton?.addEventListener("click", () => {
-        // Alterna o conteúdo do botão e o estado de Follow
-        if (isFollowing) {
-          followButton.innerHTML = "Follow";
-        } else {
-          followButton.innerHTML = "Unfollow";
-        }
-        // Alterna o estado de Follow
-        isFollowing = !isFollowing;
+    followButton?.addEventListener("click", () => {
+      // Alterna o conteúdo do botão e o estado de Follow
+      if (isFollowing) {
+        followButton.innerHTML = "Follow";
+      } else {
+        followButton.innerHTML = "Unfollow";
+      }
+      // Alterna o estado de Follow
+      isFollowing = !isFollowing;
     });
   }
 
@@ -110,7 +110,7 @@ class Post {
     const postIcons = `
     <div class="post-icons">
                 <div class="menu-list-left">
-                  <div class="btn"><i class="fa fa-heart-o"></i></div>
+                  <div class="btn"><i class="fa fa-heart-o" id="likeButton"></i></div>
                   <div class="btn"><i class="fa fa-comment-o"></i></div>
                   <div class="btn"><i class="fa fa-paper-plane-o"></i></div>
                 </div>
@@ -151,3 +151,16 @@ for (let index = 0; index < 15; index++) {
   // posts.push(post);
   post.follow();
 }
+
+const likeButton = document.getElementById("likeButton");
+
+likeButton?.addEventListener("click", function () {
+  // Adiciona a classe de animação
+  this.classList.add("animate");
+
+  // Remove a classe de animação após 1 segundo
+  setTimeout(() => {
+    this.classList.remove("animate");
+  }, 1000);
+  
+});

@@ -63,7 +63,7 @@ body {
   justify-content: space-between;
 }
 
-#menu-more-button {
+.menu-more-button {
   padding: 1px 20px;
   font-size: 15px;
   color: deepskyblue;
@@ -73,7 +73,7 @@ body {
   cursor: pointer;
 }
 
-#menu-more-button:hover {
+.menu-more-button:hover {
   background-color: deepskyblue;
   color: white;
   transition: background-color 0.4s, color 0.4s;
@@ -139,15 +139,23 @@ body {
   cursor: pointer;
 }
 
-.btn #likeButton {
-  transition: all 0.2s ease;
-}
-
-.animate {
-  font-size: 20px; 
-  transform: scale(1.2);
-}
-
 .liked {
   color: #ff3040;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Aplica a animação ao ícone de coração */
+.animate-like {
+  animation: pulse 0.3s ease;
 }

@@ -49,6 +49,14 @@ class Post {
       btnLike.classList.remove("liked");
     }
 
+    // Adiciona a classe de animação
+    btnLike.classList.add("animate-like");
+
+    // Remove a classe de animação após 300ms (igual ao tempo da animação no CSS)
+    setTimeout(() => {
+      btnLike.classList.remove("animate-like");
+    }, 400);
+
     if (likesElement) {
       likesElement.textContent = `${this._numberOfLikes} likes`;
     }
@@ -56,7 +64,7 @@ class Post {
 
   follow() {
     // Implementar o botão de FOLLOW/UNFOLLOW
-    const followButton = document.getElementById("menu-more-button");
+    const followButton = document.getElementById("menu-more-btn");
     let isFollowing = false;
     if (!followButton) return;
     followButton.id = this._id;
@@ -64,9 +72,10 @@ class Post {
     followButton?.addEventListener("click", () => {
       // Alterna o conteúdo do botão e o estado de Follow
       if (isFollowing) {
-        followButton.innerHTML = "Follow";
+        followButton.textContent = "Follow";
+        followButton.classList.add("menu-more-button");
       } else {
-        followButton.innerHTML = "Unfollow";
+        followButton.textContent = "Unfollow";
       }
       // Alterna o estado de Follow
       isFollowing = !isFollowing;
@@ -87,7 +96,7 @@ class Post {
                 <div id="menu-profile-name">${this._userName}</div>
               </div>
               <div class="menu-more">
-                <button id="menu-more-button" onclick="follow()">Follow</button>
+                <button id="menu-more-btn" class="menu-more-button">Follow</button>
                 <div id="menu-more-dots" class="btn">
                   <i class="fa fa-ellipsis-h"></i>
                 </div>
@@ -151,16 +160,3 @@ for (let index = 0; index < 15; index++) {
   // posts.push(post);
   post.follow();
 }
-
-const likeButton = document.getElementById("likeButton");
-
-likeButton?.addEventListener("click", function () {
-  // Adiciona a classe de animação
-  this.classList.add("animate");
-
-  // Remove a classe de animação após 1 segundo
-  setTimeout(() => {
-    this.classList.remove("animate");
-  }, 1000);
-  
-});

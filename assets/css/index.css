@@ -14,7 +14,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
 .post-container {
@@ -79,7 +79,6 @@ body {
   transition: background-color 0.4s, color 0.4s;
 }
 
-
 #menu-more-dots {
   padding-left: 10px;
 }
@@ -135,6 +134,22 @@ body {
   margin-top: 15px;
 }
 
+.comments {
+  font-size: 12px;
+  text-align: justify;
+  color: #666666;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+
+.comments-list {
+  width: 100px;
+  height: 100px;
+  color: white;
+  border: 1px solid black;
+
+}
+
 .btn {
   cursor: pointer;
 }
@@ -158,4 +173,20 @@ body {
 /* Aplica a animação ao ícone de coração */
 .animate-like {
   animation: pulse 0.3s ease;
+}
+
+.heart-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 140px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none; /* Não interagir com o ícone de coração */
+}
+
+.show-heart {
+  opacity: 1;
 }

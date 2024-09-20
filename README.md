@@ -5,6 +5,8 @@ Projeto desenvolvido para o desafio da plataforma DIO.
 ## 👀 Demo
 
 
+https://github.com/user-attachments/assets/8a3d644b-2800-4754-905b-d2f2b49e3d45
+
 
 ## 🚀 Tecnologias
 

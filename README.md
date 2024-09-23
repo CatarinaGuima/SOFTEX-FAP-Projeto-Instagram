@@ -15,7 +15,8 @@ Este projeto foi desenvolvido para portfólio com as seguintes tecnologias:
 - JavaScript
 - TypeScript
 - [uuid](https://www.npmjs.com/package/uuid)
-- [vs code][vc]
+- [Faker-js](https://fakerjs.dev/guide/)
+- [vs code](https://code.visualstudio.com/download)
 
 ---
 

@@ -1,6 +1,6 @@
 # Projeto-Instagram
 
-Projeto desenvolvido como um protótiopo do Instagram.
+Projeto desenvolvido como um protótipo do Instagram.
 
 ## 👀 Demo
 
